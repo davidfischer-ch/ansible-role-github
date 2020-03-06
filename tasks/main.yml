@@ -6,7 +6,7 @@
     name: '{{ github_python_packages }}'
     executable: pip2
     state: present
-  become: yes
+  become: '{{ do_become }}'
   tags: [github, packages]
 
 - block:
@@ -27,5 +27,5 @@
         create: yes
         line: '{{ github_ips|sort|first }} github.com'
         regexp: ' github.com$'
-      become: yes
+      become: '{{ do_become }}'
   tags: [github, config]
