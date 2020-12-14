@@ -4,7 +4,7 @@
   local_action:
     module: pip
     name: '{{ github_python_packages }}'
-    executable: pip2
+    executable: '{{ github_pip_path }}'
     state: present
   become: '{{ do_become }}'
   tags: [github, packages]

@@ -1,5 +1,7 @@
 do_become: yes
 
+github_pip_path: "{{ python_pip_path|default('pip') }}"
+
 github_python_packages:
   - dnspython
 
