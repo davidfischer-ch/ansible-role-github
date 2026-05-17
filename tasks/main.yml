@@ -5,6 +5,7 @@
     module: pip
     name: '{{ github_python_packages }}'
     executable: '{{ github_pip_path }}'
+    break_system_packages: '{{ github_pip_break_system_packages }}'
     state: present
   become: '{{ do_become }}'
   tags: [github, packages]

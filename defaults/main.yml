@@ -1,5 +1,6 @@
 do_become: yes
 
+github_pip_break_system_packages: "{{ python_pip_break_system_packages|default(false) }}"
 github_pip_path: "{{ python_pip_path|default('pip') }}"
 
 github_python_packages:
